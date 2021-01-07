@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:26:18 by scha              #+#    #+#             */
-/*   Updated: 2021/01/07 19:26:34 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/07 20:07:13 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	src_len;
 
-	src_len = 0;
-	while (src[src_len])
-		src_len++;
+	src_len = ft_strlen(src);
 	i = 0;
-	while (--size && src[i])
+	while (size-- && src[i])
 	{
 		dst[i] = src[i];
 		i++;

@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:33:19 by scha              #+#    #+#             */
-/*   Updated: 2021/01/07 19:33:33 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/07 20:07:31 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	ft_strrchr(const char *str, int c)
 	str2 = (char *)str;
 	if (!c)
 		return (*(str2 + len));
-	while (--len)
+	while (len--)
 	{
-		if (*(str2 + len) == (char)c)
-			return (*(str2 + len));
+		if (str2[len] == (char)c)
+			return (str2[len]);
 	}
 	return (0);
 }

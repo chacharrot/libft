@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:25:47 by scha              #+#    #+#             */
-/*   Updated: 2021/01/07 19:26:03 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/07 20:07:14 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	j;
 
 	i = ft_strlen(dst);
-	if (size < i)
+	if (size <= i)
 		return (ft_strlen(src) + size);
 	j = 0;
 	while (i < size && src[j])
