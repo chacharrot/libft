@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/04 19:52:17 by scha              #+#    #+#             */
-/*   Updated: 2021/01/04 19:52:17 by scha             ###   ########.fr       */
+/*   Created: 2021/01/07 19:20:12 by scha              #+#    #+#             */
+/*   Updated: 2021/01/07 19:20:25 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    if(fd < 0)
-        return ;
-    write(fd,&c,1);
+	if (fd < 0)
+		return ;
+	write(fd, &c, 1);
 }

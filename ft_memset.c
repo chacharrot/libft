@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/27 16:21:29 by scha              #+#    #+#             */
-/*   Updated: 2020/12/27 16:21:29 by scha             ###   ########.fr       */
+/*   Created: 2021/01/07 19:16:53 by scha              #+#    #+#             */
+/*   Updated: 2021/01/07 19:17:07 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *dest, int c, size_t len)
+void				*ft_memset(void *dest, int c, size_t len)
 {
 	char			*str;
 	unsigned char	cc;

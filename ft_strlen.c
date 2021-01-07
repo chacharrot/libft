@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/22 17:06:58 by scha              #+#    #+#             */
-/*   Updated: 2020/12/22 17:06:58 by scha             ###   ########.fr       */
+/*   Created: 2021/01/07 19:27:19 by scha              #+#    #+#             */
+/*   Updated: 2021/01/07 19:32:32 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "libft.h"
+#include "libft.h"
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 

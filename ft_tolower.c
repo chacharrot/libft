@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scha   <scha  @student.42.fr>              +#+  +:+       +#+        */
+/*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/22 16:09:58 by scha              #+#    #+#             */
-/*   Updated: 2020/12/22 16:09:58 by scha             ###   ########.fr       */
+/*   Created: 2021/01/07 19:35:12 by scha              #+#    #+#             */
+/*   Updated: 2021/01/07 19:35:33 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int		ft_toupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
-    return (c);
+	return (c);
 }

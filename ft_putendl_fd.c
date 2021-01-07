@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/05 19:14:09 by scha              #+#    #+#             */
-/*   Updated: 2021/01/05 19:14:09 by scha             ###   ########.fr       */
+/*   Created: 2021/01/07 19:20:41 by scha              #+#    #+#             */
+/*   Updated: 2021/01/07 19:20:54 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_ft(char *s, int fd)
+void	ft_putendl_ft(char *s, int fd)
 {
-	if(!s || fd < 0)
-		return;
-	write(fd,s,ft_strlen(s));
-	write(fd,"\n",1);
+	if (!s || fd < 0)
+		return ;
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }
