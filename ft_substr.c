@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:34:38 by scha              #+#    #+#             */
-/*   Updated: 2021/01/07 19:34:50 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/08 19:18:45 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		scpy = malloc(sizeof(char) * 1);
 		if (!scpy)
 			return (NULL);
-		scpy[0] = '0';
+		scpy[0] = '\0';
 		return (scpy);
 	}
 	scpy = malloc(sizeof(char) * (len + 1));
@@ -31,6 +31,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	while (i < len)
 		scpy[i++] = s[start++];
-	scpy[i] = '0';
+	scpy[i] = '\0';
 	return (scpy);
 }

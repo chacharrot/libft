@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:10:30 by scha              #+#    #+#             */
-/*   Updated: 2021/01/07 19:10:36 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/08 19:59:43 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int			digitnumber(int n)
 {
 	int	i;
 
+	if (n == 0)
+		return (1);
 	i = 0;
 	if (n < 0)
 		i = 1;
@@ -29,8 +31,9 @@ int			digitnumber(int n)
 
 char		*ft_itoa(int n)
 {
-	char	*str;
-	int		i;
+	char			*str;
+	int				i;
+	unsigned int	nbr;
 
 	i = digitnumber(n);
 	str = (char *)malloc(sizeof(char) * (i + 1));
@@ -38,15 +41,18 @@ char		*ft_itoa(int n)
 		return (NULL);
 	if (n < 0)
 	{
-		n = n * -1;
+		nbr = (unsigned int)(n * -1);
 		*str = 45;
-		i++;
 	}
+	else
+		nbr = n;
 	str[i] = '\0';
-	while (i)
+	while (i--)
 	{
-		str[--i] = n % 10 + '0';
-		n = n / 10;
+		str[i] = nbr % 10 + '0';
+		nbr = nbr / 10;
+		if (n < 0 && i == 1)
+			break ;
 	}
 	return (str);
 }

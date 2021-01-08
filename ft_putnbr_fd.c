@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:21:25 by scha              #+#    #+#             */
-/*   Updated: 2021/01/07 19:21:43 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/08 19:17:08 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, "-", 1);
 		n = n * -1;
 	}
-	if (n > 0)
+	if (n >= 10)
 		ft_putnbr_fd(n / 10, fd);
 	ft_putchar_fd(n % 10 + '0', fd);
 }

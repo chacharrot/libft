@@ -6,13 +6,13 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:20:12 by scha              #+#    #+#             */
-/*   Updated: 2021/01/07 19:20:25 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/08 20:15:30 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(const char c, int fd)
 {
 	if (fd < 0)
 		return ;

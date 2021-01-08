@@ -6,13 +6,13 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:35:12 by scha              #+#    #+#             */
-/*   Updated: 2021/01/07 19:35:33 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/07 22:09:49 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+int		ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);

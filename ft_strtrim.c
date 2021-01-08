@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:33:49 by scha              #+#    #+#             */
-/*   Updated: 2021/01/07 19:34:16 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/08 20:52:50 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ char	*ft_strtrim(const char *s1, const char *set)
 	while (s1[start] && isinset(s1[start], set))
 		start++;
 	end = ft_strlen(s1);
-	while (s1[end] && isinset(s1[end], set))
+	while (end > start && isinset(s1[end - 1], set))
 		end--;
 	str = (char *)malloc(sizeof(char) * (end - start + 2));
 	if (!str)
 		return (NULL);
 	i = 0;
-	while (start <= end)
+	while (start < end)
 		str[i++] = s1[start++];
 	str[i] = '\0';
 	return (str);
