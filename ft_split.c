@@ -6,20 +6,21 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 17:14:23 by scha              #+#    #+#             */
-/*   Updated: 2021/01/09 20:08:04 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/09 20:54:32 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-static void	freestr(char **str, size_t index)
+static void		freestr(char **str, size_t index)
 {
 	while (index--)
 	{
-		free(str[index]);
+		free (str[index]);
 		str[index] = NULL;
 	}
-	free(str);
+	free (str);
 	str = NULL;
 }
 
@@ -44,7 +45,14 @@ static size_t	hms(const char *s, char c)
 	return (result);
 }
 
-static char	**splitcpy(char **str, const char *s, char c, size_t hmsplit)
+size_t			endcount(const char *s, char c, size_t end)
+{
+	while (s[end] != c && s[end])
+		end++;
+	return (end);
+}
+
+static char		**splitcpy(char **str, const char *s, char c, size_t hmsplit)
 {
 	size_t	index;
 	size_t	start;
@@ -52,13 +60,11 @@ static char	**splitcpy(char **str, const char *s, char c, size_t hmsplit)
 
 	index = 0;
 	end = 0;
-	while (s[end] == c && s[end])
-		end++;
+	end = endcount (s, c, end);
 	while (index < hmsplit)
 	{
 		start = end;
-		while (s[end] != c && s[end])
-			end++;
+		end = endcount(s, c, end);
 		str[index] = malloc(sizeof(char) * (end - start + 1));
 		if (!str[index])
 		{
@@ -74,13 +80,13 @@ static char	**splitcpy(char **str, const char *s, char c, size_t hmsplit)
 	return (str);
 }
 
-char	**ft_split(const char *s, char c)
+char			**ft_split(const char *s, char c)
 {
 	char	**str;
 	size_t	hmsplit;
 
-	hmsplit = hms(s,c);
-	str = malloc(sizeof(char *) * (hmsplit +1));
+	hmsplit = hms(s, c);
+	str = malloc(sizeof(char *) * (hmsplit + 1));
 	if (!str)
 		return (NULL);
 	if (!splitcpy(str, s, c, hmsplit))
