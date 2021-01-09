@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:34:38 by scha              #+#    #+#             */
-/*   Updated: 2021/01/08 19:18:45 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/09 15:31:32 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*scpy;
 	size_t	i;
 
+	if (*s == 0)
+		return (NULL);
 	if (ft_strlen(s) < start)
 	{
 		scpy = malloc(sizeof(char) * 1);

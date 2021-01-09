@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:27:41 by scha              #+#    #+#             */
-/*   Updated: 2021/01/07 19:28:14 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/09 19:45:34 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	len = ft_strlen(s);
 	if (!s || !f)
-	{
 		return (NULL);
-	}
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	while (s[i])
 	{
-		str[i] = f((unsigned int)i, s[i]);
+		str[i] = f(i, s[i]);
 		i++;
 	}
 	str[i] = '\0';

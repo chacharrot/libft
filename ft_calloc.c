@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:06:23 by scha              #+#    #+#             */
-/*   Updated: 2021/01/07 19:06:30 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/09 15:06:28 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*dest;
+	char	*dest;
 
-	dest = malloc(sizeof(size) * count);
+	dest = malloc(size * count);
 	if (!dest)
 		return (NULL);
-	ft_bzero(dest, count);
+	ft_memset(dest, 0, count * size);
 	return (dest);
 }

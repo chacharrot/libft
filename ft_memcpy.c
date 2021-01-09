@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:15:27 by scha              #+#    #+#             */
-/*   Updated: 2021/01/08 18:36:24 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/09 03:32:54 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
+	if (!dest && !src)
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{
