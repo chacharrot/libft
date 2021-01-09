@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:11:50 by scha              #+#    #+#             */
-/*   Updated: 2021/01/09 03:27:09 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/09 21:09:12 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t len)
 			return (str);
 		str++;
 	}
-	if(cp == 0 && !*str)
-		return(str);
+	if (cp == 0 && !*str)
+		return (str);
 	return (NULL);
 }

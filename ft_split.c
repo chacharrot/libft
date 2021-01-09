@@ -5,26 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/04 17:14:23 by scha              #+#    #+#             */
-/*   Updated: 2021/01/09 20:54:32 by scha             ###   ########.fr       */
+/*   Created: 2021/01/09 21:07:04 by scha              #+#    #+#             */
+/*   Updated: 2021/01/09 21:07:27 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-static void		freestr(char **str, size_t index)
+static	void	freestr(char **str, size_t index)
 {
 	while (index--)
 	{
-		free (str[index]);
+		free(str[index]);
 		str[index] = NULL;
 	}
-	free (str);
+	free(str);
 	str = NULL;
 }
 
-static size_t	hms(const char *s, char c)
+static	size_t	hms(const char *s, char c)
 {
 	size_t	i;
 	size_t	result;
@@ -60,7 +59,7 @@ static char		**splitcpy(char **str, const char *s, char c, size_t hmsplit)
 
 	index = 0;
 	end = 0;
-	end = endcount (s, c, end);
+	end = endcount(s, c, end);
 	while (index < hmsplit)
 	{
 		start = end;
@@ -93,4 +92,3 @@ char			**ft_split(const char *s, char c)
 		return (NULL);
 	return (str);
 }
-
