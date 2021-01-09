@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 21:07:04 by scha              #+#    #+#             */
-/*   Updated: 2021/01/09 21:07:27 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/09 21:17:24 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,8 @@ static char		**splitcpy(char **str, const char *s, char c, size_t hmsplit)
 
 	index = 0;
 	end = 0;
-	end = endcount(s, c, end);
+	while (s[end] == c && s[end])
+		end++;
 	while (index < hmsplit)
 	{
 		start = end;
