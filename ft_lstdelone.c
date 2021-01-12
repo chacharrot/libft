@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scha </var/mail/scha>                      +#+  +:+       +#+        */
+/*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 16:03:48 by scha              #+#    #+#             */
-/*   Updated: 2021/01/11 16:11:16 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/12 19:34:28 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 		return ;
 	if (del)
 		del(lst->content);
-	free (lst);
+	free(lst);
 }

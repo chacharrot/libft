@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scha </var/mail/scha>                      +#+  +:+       +#+        */
+/*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 15:14:10 by scha              #+#    #+#             */
-/*   Updated: 2021/01/11 15:18:05 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/12 19:35:22 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*temp;
-	
+
 	if (!lst)
 		return (NULL);
 	temp = lst;
@@ -23,4 +23,3 @@ t_list	*ft_lstlast(t_list *lst)
 		temp = temp->next;
 	return (temp);
 }
-
