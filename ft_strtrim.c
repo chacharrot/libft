@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 19:33:49 by scha              #+#    #+#             */
-/*   Updated: 2021/01/09 14:59:50 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/12 17:43:03 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size_t	end;
 	size_t	i;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	while (s1[start] && isinset(s1[start], set))
 		start++;

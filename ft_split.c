@@ -6,7 +6,7 @@
 /*   By: scha <scha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 21:07:04 by scha              #+#    #+#             */
-/*   Updated: 2021/01/09 21:17:24 by scha             ###   ########.fr       */
+/*   Updated: 2021/01/12 18:14:48 by scha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ char			**ft_split(const char *s, char c)
 	char	**str;
 	size_t	hmsplit;
 
+	if (!s)
+		return (NULL);
 	hmsplit = hms(s, c);
 	str = malloc(sizeof(char *) * (hmsplit + 1));
 	if (!str)
